@@ -24,9 +24,8 @@ int * createSuffixArray(string text)
 	{
 		if(text[i] == text[j])
 		{
-			*(arr + itr) = j + 1;
+			*(arr + itr) = ++j;
 			i++;
-			j++;
 			itr++;
 		}
 		else
