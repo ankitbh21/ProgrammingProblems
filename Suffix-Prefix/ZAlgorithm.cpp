@@ -96,7 +96,7 @@ int* createZArray(string text)
 
 int patternMatch(string text, string pattern)
 {
-	string concatenated = pattern + "$" + text;
+	string concatenated = pattern + "~" + text;
 	int* arr = createZArray(concatenated);
 	int len = pattern.length();
 	int textLen = concatenated.length();
@@ -114,7 +114,7 @@ int patternMatch(string text, string pattern)
 
 int main()
 {	
-int x=patternMatch("aaabxaabx","aabx");
+	int x = patternMatch("aaabxaabx","aabx");
 	cout<<"neeraj"<<endl;
 	return 0;
 }
