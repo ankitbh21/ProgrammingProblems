@@ -82,7 +82,7 @@
 	}	
 	return position;
  }
-  
+ 
  int main()
  {
  	int n = 4;
