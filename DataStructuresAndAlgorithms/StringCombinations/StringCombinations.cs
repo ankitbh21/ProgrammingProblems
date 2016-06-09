@@ -1,4 +1,16 @@
-﻿using System;
+﻿/**
+ * Date 05/12/2016
+ * @author Ankit Bhardwaj
+ *
+ * Generate all combinations of string in lexicographically sorted order where repetitions of
+ * character is possible in string.
+ * 
+ * Time complexity - O(2^n) where n is size of string
+ * Space complexity - O(n)
+ *
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
