@@ -56,26 +56,26 @@ namespace StringPermutation
             //int[] count = countMap.Values.ToArray();
 
             char[] result = new char[input.Length];
-            PermuteRecur(chars, count, result, 0);
+            PermuteRecursive(chars, count, result, 0);
         }
 
-        static void PermuteRecur(char[] str, int[] count, char[] result, int level)
+        static void PermuteRecursive(char[] input, int[] characterCountInInput, char[] output, int level)
         {
-            if (level == result.Length)
+            if (level == output.Length)
             {
-                ProcessResult(result);
+                ProcessResult(output);
                 return;
             }
-            for (int i = 0; i < str.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (count[i] == 0)
+                if (characterCountInInput[i] == 0)
                 {
                     continue;
                 }
-                count[i]--;
-                result[level] = str[i];
-                PermuteRecur(str, count, result, level + 1);
-                count[i]++;
+                characterCountInInput[i]--;
+                output[level] = input[i];
+                PermuteRecursive(input, characterCountInInput, output, level + 1);
+                characterCountInInput[i]++;
             }
         }
 
@@ -83,5 +83,5 @@ namespace StringPermutation
         {
             Console.WriteLine(result);
         }
-    }    
+    }
 }

@@ -8,6 +8,8 @@
  *
  * Time complexity O(n*n)
  * Space complexity O(n*n)
+ *
+ * http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/
  */
  
  #include <iostream>

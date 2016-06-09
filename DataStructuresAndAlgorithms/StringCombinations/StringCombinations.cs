@@ -47,26 +47,26 @@ namespace StringCombinations
             CombineRecur(chars, count, 0, result, 0);
         }
 
-        static void CombineRecur(char[] input, int[] count, int pos, char[] output, int len)
+        static void CombineRecur(char[] input, int[] characterCountInInput, int position, char[] output, int length)
         {
-            ProcessResult(output, len);
-            for (int i = pos; i < input.Length; i++)
+            ProcessResult(output, length);
+            for (int i = position; i < input.Length; i++)
             {
-                if (count[i] == 0)
+                if (characterCountInInput[i] == 0)
                 {
                     continue;
                 }
-                count[i]--;
-                output[len] = input[i];
+                characterCountInInput[i]--;
+                output[length] = input[i];
                 
-                CombineRecur(input, count, i, output, len + 1);
-                count[i]++;
+                CombineRecur(input, characterCountInInput, i, output, length + 1);
+                characterCountInInput[i]++;
             }
         }
 
-        private static void ProcessResult(char[] result, int pos)
+        private static void ProcessResult(char[] result, int length)
         {
-            for (int i = 0; i < pos; i++)
+            for (int i = 0; i < length; i++)
             {
                 Console.Write(result[i]);
             }
