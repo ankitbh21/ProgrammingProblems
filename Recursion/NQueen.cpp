@@ -89,7 +89,7 @@
  {
  	int n = 4;
  	Position* position = SolveNQueen(n);
- 	for(int i = 0; i < n; i++)
+ 	for(int i = 0; i < position.; i++)
  	{
  		position[i].Print();
 	}
