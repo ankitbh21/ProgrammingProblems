@@ -14,6 +14,14 @@ namespace SearchProblems
             Start = new TrieNode(' ');
         }
 
+        public void AddWords(IEnumerable<string> words)
+        {
+            foreach (var word in words)
+            {
+                AddWord(word);
+            }
+        }
+
         public bool AddWord(string word)
         {
             if (string.IsNullOrEmpty(word)) return false;
